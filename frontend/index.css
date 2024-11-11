@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #D35400;
+    --secondary-color: #F39C12;
+    --background-color: #ECF0F1;
+    --text-color: #2C3E50;
+    --accent-color: #E67E22;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Rubik Mono One', sans-serif;
+    color: white;
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-family: 'Rubik Mono One', sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 40px 0;
+    font-size: 2em;
+}
+
+.retro-line {
+    height: 10px;
+    background: repeating-linear-gradient(
+        45deg,
+        var(--accent-color),
+        var(--accent-color) 10px,
+        var(--secondary-color) 10px,
+        var(--secondary-color) 20px
+    );
+    margin-top: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-inner {
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin: 10px 0;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 1.2em;
+}
+
+.card h4 {
+    color: var(--secondary-color);
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.card p {
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.loading {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 20px;
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

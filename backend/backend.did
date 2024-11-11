@@ -1,0 +1,18 @@
+type Employee = 
+ record {
+   bio: text;
+   name: text;
+   photoUrl: text;
+   title: text;
+ };
+type Company = 
+ record {
+   description: text;
+   logoUrl: text;
+   name: text;
+   sector: text;
+ };
+service : {
+  getCompanies: () -> (vec Company) query;
+  getEmployees: () -> (vec Employee) query;
+}
